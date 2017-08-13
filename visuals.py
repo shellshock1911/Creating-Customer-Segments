@@ -22,7 +22,7 @@ def pca_results(good_data, pca):
     	'''
     
     	# Dimension indexing
-    	dimensions = dimensions = ['Dimension {}'.format(i) for i in range(1,len(pca.components_)+1)]
+    	dimensions = ['Dimension {}'.format(i) for i in range(1,len(pca.components_)+1)]
      
     	# PCA components
     	components = pd.DataFrame(np.round(pca.components_, 4), columns = good_data.keys())
@@ -165,6 +165,6 @@ def channel_results(reduced_data, outliers, pca_samples):
 
 	# Set plot title
 	ax.set_title("PCA-Reduced Data Labeled by 'Channel'\nTransformed Sample Data Circled");
- 
-        plt.axvline(x=-1.8,color='r')
-        plt.axvline(x=3,color='r')
+
+        plt.axvline(x=1.8,color='r')
+        plt.axvline(x=-3,color='r')
